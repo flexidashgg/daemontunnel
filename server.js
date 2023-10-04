@@ -11,7 +11,9 @@ const ClientManager = require('./lib/ClientManager');
 const debug = Debug('localtunnel:server');
 
 module.exports = function(opt) {
-    opt = opt || {};
+    opt = opt || {
+        validHosts: 'daemon.flexidash.lucat.lol'
+    };
 
     const validHosts = (opt.domain) ? [opt.domain] : undefined;
     const myTldjs = tldjs.fromUserSettings({ validHosts });
