@@ -1,21 +1,21 @@
-import log from 'book';
-import Koa from 'koa';
-import tldjs from 'tldjs';
-import Debug from 'debug';
-import http from 'http';
-import { hri } from 'human-readable-ids';
-import Router from 'koa-router';
+const log = require('book');
+const Koa = require('koa');
+const tldjs = require('tldjs');
+const Debug = require('debug');
+const http = require('http');
+const hri = require('human-readable-ids').hri;
+const Router = require('koa-router');
 
-import ClientManager from './lib/ClientManager';
+const ClientManager = require('./lib/ClientManager');
 
 const debug = Debug('localtunnel:server');
 
-export default function(opt) {
+module.exports = function(opt) {
     opt = opt || {};
 
     const validHosts = (opt.domain) ? [opt.domain] : undefined;
     const myTldjs = tldjs.fromUserSettings({ validHosts });
-    const landingPage = opt.landing || 'https://localtunnel.github.io/www/';
+    const landingPage = opt.landing || 'https://flexidash.lucat.lol';
 
     function GetClientIdFromHostname(hostname) {
         return myTldjs.getSubdomain(hostname);
