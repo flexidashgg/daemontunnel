@@ -12,7 +12,7 @@ const debug = Debug('localtunnel:server');
 
 module.exports = function(opt) {
     opt = opt || {
-        validHosts: 'daemon.flexidash.lucat.lol'
+        domain: 'daemon.flexidash.lucat.lol'
     };
 
     const validHosts = (opt.domain) ? [opt.domain] : undefined;
