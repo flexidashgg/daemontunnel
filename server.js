@@ -136,7 +136,7 @@ module.exports = function(opt) {
         const client = manager.getClient(clientId);
         if (!client) {
             res.statusCode = 404;
-            res.end('404');
+            res.end('404: tunnel not found. Please checke the subdomain and try again.');
             return;
         }
 
