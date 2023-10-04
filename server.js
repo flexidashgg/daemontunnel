@@ -15,8 +15,7 @@ module.exports = function(opt) {
         domain: 'daemon.flexidash.lucat.lol'
     };
 
-    const validHosts = (opt.domain) ? [opt.domain] : undefined;
-    const myTldjs = tldjs.fromUserSettings({ validHosts });
+    const myTldjs = tldjs.fromUserSettings({ validHosts: [ 'daemon.flexidash.lucat.lol' ]  });
     const landingPage = opt.landing || 'https://flexidash.lucat.lol';
 
     function GetClientIdFromHostname(hostname) {
