@@ -1,7 +1,7 @@
 {
-  "author": "Roman Shtylman <shtylman@gmail.com>",
-  "name": "localtunnel-server",
-  "description": "expose localhost to the world",
+  "author": "lucatolton",
+  "name": "daemontunnel",
+  "description": "securely tunnel the flexidash daemon to the www. no ports required.",
   "version": "0.0.8",
   "license": "MIT",
 
